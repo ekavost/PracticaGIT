@@ -20,20 +20,22 @@ namespace PracticaGIT_EV2324
         private void btnCalculate_Click(object sender, EventArgs e)
         {
             string textoTelegrama;
-            char tipoTelegrama = ' ';
+            char tipoTelegrama = 'o';
             int numPalabras = 0;
             double coste;
             textoTelegrama = tbText.Text;
 
             if (cbUrgent.Checked)
                 tipoTelegrama = 'u';
-            numPalabras = textoTelegrama.Length;
+
+            char[] delimitadores = new char[] { ' ', '\r', '\n' };
+            numPalabras = textoTelegrama.Split (delimitadores, StringSplitOptions.RemoveEmptyEntries).Length;
 
             if (tipoTelegrama == 'o')
                 if (numPalabras <= 10)
-                    coste = 25;
+                    coste = 2.5;
                 else
-                    coste = 0.5 * numPalabras;
+                    coste = 0.5 * 2.5 * (numPalabras - 10);
             else
             if (tipoTelegrama == 'u')
                 if (numPalabras <= 10)
