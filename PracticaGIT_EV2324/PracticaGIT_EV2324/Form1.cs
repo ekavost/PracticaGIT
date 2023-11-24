@@ -25,7 +25,7 @@ namespace PracticaGIT_EV2324
             double coste;
             textoTelegrama = tbText.Text;
 
-            if (cbUrgent.Checked)
+            if (rbUrgent.Checked)
                 tipoTelegrama = 'u';
 
             char[] delimitadores = new char[] { ' ', '\r', '\n' };
