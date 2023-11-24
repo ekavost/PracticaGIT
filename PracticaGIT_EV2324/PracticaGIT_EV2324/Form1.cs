@@ -35,7 +35,7 @@ namespace PracticaGIT_EV2324
                 if (numPalabras <= 10)
                     coste = 2.5;
                 else
-                    coste = 0.5 * 2.5 * (numPalabras - 10);
+                    coste = 2.5 + 0.5 * (numPalabras - 10);
             else
             if (tipoTelegrama == 'u')
                 if (numPalabras <= 10)
